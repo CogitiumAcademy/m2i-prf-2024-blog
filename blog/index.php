@@ -1,4 +1,11 @@
 <?php
+require("config/config.inc.php");
+
+$meta_descr = "";
+$title = "Surf Blog";
+$title_h1 = "Surf Blog";
+$header_bg = "home-bg.jpg";
+$subheading = "";
 
 $page = "home";
 

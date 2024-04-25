@@ -1,3 +1,5 @@
 <?php
-echo "Home";
 
+$subheading = "Un super blog de surf";
+
+require("template/home.tpl.php");
