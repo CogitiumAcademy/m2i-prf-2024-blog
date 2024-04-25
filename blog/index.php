@@ -1,6 +1,10 @@
 <?php
 require("config/config.inc.php");
 
+require("sql/pdoConnect.inc.php");
+$pdo = pdoConnect();
+var_dump($pdo); exit;
+
 $meta_descr = "";
 $title = "Surf Blog";
 $title_h1 = "Surf Blog";
