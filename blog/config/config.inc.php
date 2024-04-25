@@ -1,6 +1,7 @@
 <?php
 
 define("SITE_NAME", "Surf Blog");
+define("POST_TRUNCATE", 200);
 
 const DB_SERVER = "localhost";
 const DB_USERNAME= "root";
