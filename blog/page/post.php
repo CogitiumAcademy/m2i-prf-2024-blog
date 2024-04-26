@@ -19,6 +19,10 @@ if (isset($_GET["slug"])) {
     $subheading = "Rédigé par " . $post['firstName'] . " " . $post['lastName'] . " le " . $post['createdAt'] . "<br>Classé dans " . $post['name'];
     $header_bg = $post["image"];
 
+    require("sql/comment.sql.php");
+    $comments = getAllCommentsByPost($pdo, $post["id"]);
+    //var_dump($comments); exit;
+
     require("template/post.tpl.php");
 } else {
     die("Paramètre manquant !");

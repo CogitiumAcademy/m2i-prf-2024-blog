@@ -25,7 +25,7 @@ function getOnePostBySlug($pdo, $slug) {
     try {
         // SQL statement (déclaration)
         $query = 
-        "SELECT `title`, `content`, `createdAt`, `image`, `lastName`, `firstName`, `name` 
+        "SELECT A.`id`, `title`, `content`, `createdAt`, `image`, `lastName`, `firstName`, `name` 
             FROM `posts` A
             INNER JOIN `users` B ON A.id_users = B.id
             INNER JOIN `categories` C ON A.id_categories = C.id
