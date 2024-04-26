@@ -4,7 +4,7 @@ function getAllPosts($pdo) {
     try {
         // SQL statement (déclaration)
         $query = 
-        "SELECT `title`, A.`slug`, LEFT(content, " . POST_TRUNCATE . ") AS content, `createdAt`, `lastName`, `firstName`, `name` 
+        "SELECT `title`, A.`slug`, LEFT(content, " . POST_TRUNCATE . ") AS content, `createdAt`, `image`, `lastName`, `firstName`, `name` 
             FROM `posts` A
             INNER JOIN `users` B ON A.id_users = B.id
             INNER JOIN `categories` C ON A.id_categories = C.id

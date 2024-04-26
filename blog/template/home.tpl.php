@@ -11,6 +11,7 @@
                     <div class="post-preview">
                         <a href="?page=post&slug=<?= $post["slug"] ?>">
                             <h2 class="post-title"><?= $post["title"] ?></h2>
+                            <img class="w-50" src="<?= $post["image"] ?>" alt="">
                             <h3 class="post-subtitle"><?= $post["content"] ?>...</h3>
                         </a>
                         <p class="post-meta">
