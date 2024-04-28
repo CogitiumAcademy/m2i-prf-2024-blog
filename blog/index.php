@@ -7,7 +7,7 @@ $pdo = pdoConnect();
 
 $meta_descr = "";
 $title = "Surf Blog";
-$title_h1 = "Surf Blog";
+$title_h1 = "Surf Blog !";
 $header_bg = "public/clean/assets/img/home-bg.jpg";
 $subheading = "";
 
