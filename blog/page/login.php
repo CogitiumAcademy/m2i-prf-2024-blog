@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // die('NOK');
+    set_flash_message("Connexion impossible, vérifier email / password", "danger");
     header('Location: index.php?page=login');
     exit;
 

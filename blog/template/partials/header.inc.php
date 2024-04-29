@@ -33,7 +33,7 @@
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="?page=about">About</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="?page=contact">Contact</a></li>
 
-                <?php if (!isset($_SESSION['user'])) { ?>
+                <?php if (!isGranted()) { ?>
                     <li class="nav-item">
                         <a class="nav-link px-lg-3 py-3 py-lg-4" href="?page=login">Login</a>
                     </li>
