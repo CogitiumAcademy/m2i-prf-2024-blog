@@ -37,6 +37,16 @@
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- WYSIWYG : CK Editor -->
+        <!-- https://cdn.ckeditor.com/ -->
+        <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+
+        <script>
+            <!-- Permet de charger un bel éditeur sur la page "addpost" -->
+            CKEDITOR.replace( 'content' );
+        </script>
+
         <!-- Core theme JS-->
         <script src="public/clean/js/scripts.js"></script>
     </body>

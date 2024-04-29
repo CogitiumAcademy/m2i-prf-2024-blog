@@ -19,3 +19,19 @@ function authenticationRequired() {
 function isGranted() {
     return isset($_SESSION['user']);
 }
+
+/**
+ * Permet de générer un slug à partir d'un string
+ */
+function slug($string) {
+    // Convertir la chaîne en minuscules
+    $string = strtolower($string);
+
+    // Supprimer les caractères spéciaux et les accents
+    $string = preg_replace('/[^a-z0-9]+/', '-', $string);
+
+    // Supprimer les tirets en début et fin de chaîne
+    $string = trim($string, '-');
+
+    return $string;
+}
