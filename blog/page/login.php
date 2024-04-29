@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // 3. Stockage de l'utilisateur en session
         $_SESSION['user'] = $user;
 
-        // TODO 4. CHALLENGE : Notification Flash
+        // 4. Notification Flash, Flash Messages, ...
+        set_flash_message("Connexion réussie", "success");
 
         // 5. Redirection sur la page d'accueil
         header('Location: index.php');

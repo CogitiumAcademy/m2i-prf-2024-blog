@@ -65,6 +65,8 @@
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Affichage des notifications. Voir lib/flash.lib.php -->
+                <?= get_flash_messages(); ?>
                 <div class="site-heading">
                     <h1><?= $title_h1 ?></h1>
                     <span class="subheading"><?= $subheading ?></span>

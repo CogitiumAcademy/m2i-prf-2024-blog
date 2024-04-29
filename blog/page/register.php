@@ -20,8 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $_POST["password"] = $hashPassword;
 
     require("sql/user.sql.php");
-    $retour = registerUser($pdo, $_POST);
+    $isRegistered = registerUser($pdo, $_POST);
 
-    header("Location:?page=login");
+    if ($isRegistered) {
+        set_flash_message("Félicitation, votre inscription a bien été validée. 
+        Vous pouvez maintenant vous connecter.", 'success');
+        header("Location:?page=login");
+        exit;
+    }
+
+    set_flash_message("OoOps, une erreur est survenue. Veuillez réessayer", 'danger');
+    header("Location:?page=register");
     exit;
 }

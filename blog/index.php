@@ -8,6 +8,9 @@ require("sql/pdoConnect.inc.php");
 $pdo = pdoConnect();
 //var_dump($pdo); exit;
 
+// Chargement des librairies
+require 'lib/flash.lib.php';
+
 $meta_descr = "";
 $title = "Surf Blog";
 $title_h1 = "Surf Blog !";
