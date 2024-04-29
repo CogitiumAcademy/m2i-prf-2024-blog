@@ -1,6 +1,9 @@
 <?php
-require("config/config.inc.php");
 
+// Initialisation de ma session
+session_start();
+
+require("config/config.inc.php");
 require("sql/pdoConnect.inc.php");
 $pdo = pdoConnect();
 //var_dump($pdo); exit;
