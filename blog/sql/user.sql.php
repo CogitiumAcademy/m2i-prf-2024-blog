@@ -47,3 +47,45 @@ function registerUser($pdo, $user) {
         die("Error: " . $e->getMessage());
     }
 }
+
+function getOneUser($pdo, $id) {
+
+    try {
+        $query = 
+        "SELECT * 
+            FROM `users` 
+            WHERE `id` = :id";
+        $cursor = $pdo->prepare($query);
+        $cursor->bindValue(':id', $id, PDO::PARAM_INT);
+        $cursor->execute();
+        
+        $user = $cursor->fetch();
+        return $user;
+    } catch (PDOException $e) {
+        die("Erreur SQL : " . $e->getMessage());
+    }
+}
+
+function updateUser($pdo, $user) {
+
+    try {
+        $query = 
+        "UPDATE `users` 
+        SET 
+            `lastName` = :lastName, 
+            `firstName` = :firstName,
+            `phone` = :phone 
+        WHERE `id` = :id";
+
+        $cursor = $pdo->prepare($query);
+        $cursor->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
+        $cursor->bindParam(':lastName', $user['lastName'], PDO::PARAM_STR);
+        $cursor->bindParam(':firstName', $user['firstName'], PDO::PARAM_STR);
+        $cursor->bindParam(':phone', $user['phone'], PDO::PARAM_STR);
+        $cursor->execute();
+        
+        return TRUE;
+    } catch (PDOException $e) {
+        die("Erreur SQL : " . $e->getMessage());
+    }
+}

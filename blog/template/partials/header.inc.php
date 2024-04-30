@@ -47,7 +47,7 @@
                 <?php } else { ?>
                     <li class="nav-item">
                         <a class="nav-link px-lg-3 py-3 py-lg-4" href="?page=profil">
-                            (Bonjour <?= $_SESSION['user']['firstName'] ?> :
+                            [ Bonjour <?= $_SESSION['user']['firstName'] ?> ]
                         </a>
                     </li>
                     <li class="nav-item">

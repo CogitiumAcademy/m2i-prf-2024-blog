@@ -1,5 +1,7 @@
 <?php
 
+define('ENV', 'DEV');
+
 define("SITE_NAME", "Surf Blog");
 define("POST_TRUNCATE", 200);
 
