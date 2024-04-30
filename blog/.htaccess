@@ -1,0 +1,16 @@
+# Activation de la Réecriture des URLs
+RewriteEngine On
+# RewriteBase /formation/m2i/CdaCergy2024/blog/src
+# RewriteBase /   
+
+# Exclusions
+RewriteCond ${REQUEST_URI} ^.+$
+RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|php|ico|txt|pdf|xml)$ [OR]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+RewriteRule ^ - [L]
+
+# Règles de Réecriture
+RewriteRule ^([^/]+)/([^/]+) index.php?page=$1&slug=$2 [QSA,L]
+RewriteRule ^([^/]+) index.php?page=$1 [QSA,L]

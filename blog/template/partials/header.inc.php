@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!---------- Pour l'URL rewriting ---------->
+    <?php define('BASE_DIR', $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . ((dirname($_SERVER['SCRIPT_NAME']) != '/') ? dirname($_SERVER['SCRIPT_NAME']) : '')); ?>
+    <base href="<?php echo BASE_DIR; ?>/" >
+    <!-------------(voir .htaccess))------------>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="<?= $meta_descr ?>"/>

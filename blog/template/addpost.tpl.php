@@ -21,14 +21,14 @@
                 <div class="my-5">
                     <form id="contactForm" method='post' action='?page=addpost'>
                         <div class="form-floating">
-                            <input class="form-control" type="text" id="title" name="title">
+                            <input class="form-control" type="text" id="title" name="title" required>
                             <label for="title">Titre</label>
                         </div>
                         <div class="mt-2">
                             <textarea class="form-control" id="content" name="content" rows="5" cols="33"></textarea>
                         </div>
                         <div class="form-floating">
-                            <input class="form-control" type="text" id="image" name="image">
+                            <input class="form-control" type="text" id="image" name="image" required>
                             <label for="image">Illustration</label>
                         </div>
                         <div class="mt-2">
