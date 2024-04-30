@@ -13,6 +13,7 @@ function loginUser($email) {
 
         // Récupération de l'utilisateur
         $user = $cursor->fetch();
+        //var_dump($user); exit;
 
         // On retourne l'utilisateur trouvé dans la base
         return $user;
@@ -84,6 +85,26 @@ function updateUser($pdo, $user) {
         $cursor->bindParam(':phone', $user['phone'], PDO::PARAM_STR);
         $cursor->execute();
         
+        return TRUE;
+    } catch (PDOException $e) {
+        die("Erreur SQL : " . $e->getMessage());
+    }
+}
+
+function updatePassword($pdo, $id, $new_password) {
+
+    try {
+        $query = 
+        "UPDATE `users` 
+        SET 
+            `password` = :password
+        WHERE `id` = :id";
+
+        $cursor = $pdo->prepare($query);
+        $cursor->bindParam(':id', $id, PDO::PARAM_INT);
+        $cursor->bindParam(':password', $new_password, PDO::PARAM_STR);
+        $cursor->execute();
+
         return TRUE;
     } catch (PDOException $e) {
         die("Erreur SQL : " . $e->getMessage());

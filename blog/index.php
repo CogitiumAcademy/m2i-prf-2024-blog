@@ -17,7 +17,7 @@ require 'lib/flash.lib.php';
 $meta_descr = "";
 $title = "Surf Blog";
 $title_h1 = "Surf Blog !";
-$header_bg = "public/clean/assets/img/home-bg.jpg";
+$header_bg = "public/clean/assets/img/header-bg.jpg";
 $subheading = "";
 
 $page = "home";
